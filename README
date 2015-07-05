@@ -1,4 +1,9 @@
-This is your new Play application
-=================================
+http://oumu.herokuapp.com/
 
-This file will be packaged with your application, when using `activator dist`.
+超簡易ログアプリ。Webテスト用。しばらくすると消えるので注意
+
+* `/` ログを見る
+* `/write?value=hoge` hogeを書き込む
+* `/reset` ログをリセット
+
+
