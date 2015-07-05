@@ -1,9 +1,9 @@
 http://oumu.herokuapp.com/
 
-���ȈՃ��O�A�v���BWeb�e�X�g�p�B���΂炭����Ə�����̂Œ���
+引数オウム返しするだけ超簡易ログアプリ。Webテスト用。しばらくすると消えるので注意
 
-* `/` ���O������
-* `/write?value=hoge` hoge����������
-* `/reset` ���O�����Z�b�g
+* `/` ログを見る
+* `/write?value=hoge` hogeを書き込む
+* `/reset` ログをリセット
 
 
