@@ -18,8 +18,14 @@ object Application extends Controller {
 
   def index = Action {
     Ok {
-      if (file.exists) Source.fromFile(file).getLines.mkString("\n")
-      else "おきのどくですが ふぁいる1ばんは きえてしまいました"
+      if (file.exists) {
+        val lines = Source.fromFile(file).getLines.toList
+        lines.mkString(lines.size + "\n", "\n", "")
+      } else
+        """0
+          |/write?value=hogeで書き込み,
+          |/resetでリセット
+        """.stripMargin
     }
   }
 
