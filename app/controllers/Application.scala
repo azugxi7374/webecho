@@ -20,8 +20,7 @@ object Application extends Controller {
   }
   lazy val valuekey = "value"
 
-  val usage = """0
-                |/write?value=hogeで書き込み,
+  val usage = """/write?value=hogeで書き込み,
                 |/resetでリセット
                 |=================================
               """.stripMargin
@@ -49,7 +48,7 @@ object Application extends Controller {
     val str = df.format(Calendar.getInstance().getTime) + " " + value
     pw.println(str)
     pw.close()
-    Ok("Write : " + str)
+    Redirect(routes.Application.index)
   }
 }
 

@@ -1,6 +1,6 @@
 http://webtestecho.herokuapp.com/
 
-引数オウム返しするだけ超簡易ログアプリ。Webテスト用。しばらくすると消えるので注意
+簡易ログアプリ。Webテスト用。しばらくすると消える
 
 * `/` ログを見る
 * `/write?value=hoge` hogeを書き込む
