@@ -44,13 +44,20 @@ object Application extends Controller {
   }
 
   def write = Action { implicit request =>
-    val value = request.getQueryString(valuekey).getOrElse("")
+
     val pw = new PrintWriter(new FileWriter(file, true))
-    val str = df.format(Calendar.getInstance().getTime) + " " + value
+    val str = createLogString(request)
     pw.println(str)
     pw.close()
     Ok("write!")
     // Redirect(routes.Application.index)
+  }
+
+  private def createLogString[T](request: Request[T]) = {
+    val ip = request.remoteAddress.split(",").last
+    val time = df.format(Calendar.getInstance().getTime)
+    val value = request.getQueryString(valuekey).getOrElse("")
+    s"""[$ip] $time $value"""
   }
 }
 
