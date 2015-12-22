@@ -39,7 +39,8 @@ object Application extends Controller {
 
   def reset = Action {
     file.delete
-    Redirect(routes.Application.index)
+    Ok("reset!")
+    // Redirect(routes.Application.index)
   }
 
   def write = Action { implicit request =>
@@ -48,7 +49,8 @@ object Application extends Controller {
     val str = df.format(Calendar.getInstance().getTime) + " " + value
     pw.println(str)
     pw.close()
-    Redirect(routes.Application.index)
+    Ok("write!")
+    // Redirect(routes.Application.index)
   }
 }
 
