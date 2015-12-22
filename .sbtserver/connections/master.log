@@ -1,0 +1,7 @@
+New log file opened at Tue Dec 22 18:57:44 JST 2015 by 5620@yamaura-PC
+Taking next connection to: 52881
+New client attempting to connect on port: 52882-52881
+  Address = /10.229.57.50:52881
+This client on port 52882 has uuid 9aa1d9f6-34fc-4792-a453-1d990df10646 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-9aa1d9f6-34fc-4792-a453-1d990df10646
+Taking next connection to: 52881
