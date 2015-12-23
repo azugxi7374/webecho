@@ -54,10 +54,10 @@ object Application extends Controller {
   }
 
   private def createLogString[T](request: Request[T]) = {
-    val ip = request.remoteAddress.split(",").last
+    val ip = request.remoteAddress //.split(",").last
     val time = df.format(Calendar.getInstance().getTime)
     val value = request.getQueryString(valuekey).getOrElse("")
-    s"""[$ip] $time $value"""
+    s"""[$time] $value [$ip]"""
   }
 }
 
